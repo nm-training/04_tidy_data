@@ -19,13 +19,17 @@ library()
 ```
 
 
-## Creating a Data Frame
+## Creating a Tibble
+
+- Tibble is a modern version of data frame.
+- They do less (eg: doesn't change variable names) and 
+  talk more (eg: warns when variable doesn't exists).
 
 ```{r}
 
-# data frame with 4 cols, 3 rows
-data <- data_frame(
-  id = c(1, 2),
+# tibble with 4 cols, 3 rows
+data <- tibble(
+  id = 1:2,
   x = c("a", "b"),
   y = c("c", "d"),
   z = c("e", "f")
@@ -36,9 +40,14 @@ data <- data_frame(
 ## Pivoting - Wide to Long
 
 ```{r}
-long 
+long <- pivot_longer(     ,          
+                     cols = ,        
+                     names_to = "",  
+                     values_to = ""    
+                     )
 
 
+long
 
 ```
 
@@ -46,35 +55,58 @@ long
 ## Pivoting - Long to Wide
 
 ```{r}
+wide <- pivot_wider(     ,        
+                    names_from = , 
+                    values_from =     
+)
+
+
 wide
-
-
-
 ```
 
 
 ## Your Turn - 01
 
+- Convert table4a data into tidy format and
+save it into table_a.
+
 ```{r}
 
-table4a
+table_a <- table4a
+
+
+
+
+table_a
 
 ```
 
 
 ## Your Turn - 02
 
+- Convert table4b data into tidy format and 
+save it into table_b.
+
 ```{r}
 
-table4b
+table_b <- table4b
 
+
+
+
+
+table_b
 
 ```
 
 
 ## Your Turn - 03
 
+## Join table_a and table_b into df.
+
 ```{r}
+library(dplyr)
+
 
 df
 
@@ -88,24 +120,12 @@ df
 
 ```{r}
 
+
+
+
+
+
+
+
+
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
